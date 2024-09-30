@@ -16,7 +16,7 @@ module.exports = {
                 content: 'No Character.',
                 ephemeral: true
             });
-        else {
+        } else {
             return interaction.reply({
                 content: 'Incomplete.',
                 ephemeral: true
