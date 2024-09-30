@@ -42,7 +42,7 @@ module.exports = {
         // Construct the profile message
         const profileEmbed = new EmbedBuilder()
             .setColor('#0099ff') // Set the embed color
-            .setTitle(`${character.characterName}`)
+            .setTitle(`${character.characterName} | LV ${character.level}`)
             .addFields({ name: 'Stats:', value: `Strength: ${strengthGrade}\n
                 Dexterity: ${dexterityGrade}\n
                 Constitution: ${constitutionGrade}\n
