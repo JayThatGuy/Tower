@@ -28,24 +28,22 @@ module.exports = {
                 ephemeral: true
             });
         }
-        // conform syntax
+        // adjust stat
         if (statName == 'Str', 'str', 'Strength', 'strength') {
-            statName = 'strength';
+            const newStat = statChange + character.strength;
         } else if (statName == 'Dex', 'dex', 'Dexterity', 'dexterity') {
-            statName = 'dexterity';
+            const newStat = statChange + character.dexterity;
         } else if (statName == 'Con', 'con', 'Constitution', 'constitution') {
-            statName = 'constitution';
+            const newStat = statChange + character.constitution;
         } else if (statName == 'Int', 'int', 'Intelligence', 'intelligence') {
-            statName = 'intelligence';
+            const newStat = statChange + character.intelligence;
         } else if (statName == 'Gold', 'gold') {
-            statName = 'gold';
+            const newStat = statChange + character.gold;
         } else {
             return interaction.reply({
                 content: 'No Character.',
                 ephemeral: true
             });
         }
-        // adjust stat
-        const newStat = statChange + character.(statName);
     }
 } 
