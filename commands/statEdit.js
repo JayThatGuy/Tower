@@ -30,22 +30,22 @@ module.exports = {
             });
         }
         // adjust stat
-        if (statName == 'Str', 'str', 'Strength', 'strength') {
+        if (statName === 'Str', 'str', 'Strength', 'strength') {
             const newStat = statChange + character.strength;
             character.strength = newStat;
-        } else if (statName == 'Dex', 'dex', 'Dexterity', 'dexterity') {
+        } else if (statName === 'Dex', 'dex', 'Dexterity', 'dexterity') {
             const newStat = statChange + character.dexterity;
             character.dexterity = newStat;
-        } else if (statName == 'Con', 'con', 'Constitution', 'constitution') {
+        } else if (statName === 'Con', 'con', 'Constitution', 'constitution') {
             const newStat = statChange + character.constitution;
             character.constitution = newStat;
-        } else if (statName == 'Int', 'int', 'Intelligence', 'intelligence') {
+        } else if (statName === 'Int', 'int', 'Intelligence', 'intelligence') {
             const newStat = statChange + character.intelligence;
             character.intelligence = newStat;
-        } else if (statName == 'Gold', 'gold') {
+        } else if (statName === 'Gold', 'gold') {
             const newStat = statChange + character.gold;
             character.gold = newStat;
-        } else if (statName == 'Lv', 'lv', 'LV', 'LVL', 'lvl', 'Level', 'level') {
+        } else if (statName === 'Lv', 'lv', 'LV', 'LVL', 'lvl', 'Level', 'level') {
             const newStat = statChange + character.level;
             character.level = newStat;
         } else {
