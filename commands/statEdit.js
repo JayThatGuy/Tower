@@ -23,7 +23,7 @@ module.exports = {
         // checkfor an existing character
         const character = await Character.findOne({ userId});
 
-        if (!existingCharacter) {
+        if (!character) {
             return interaction.reply({
                 content: 'No Character.',
                 ephemeral: true
