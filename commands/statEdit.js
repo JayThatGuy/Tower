@@ -10,7 +10,7 @@ module.exports = {
             .setDescription('The stat to be changed')
             .setRequired(true)
         )
-        .addStringOption(option =>
+        .addIntegerOption(option =>
             option.setName('value')
             .setDescription('The amount to change by')
             .setRequired(true)
