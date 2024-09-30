@@ -12,6 +12,7 @@ module.exports = {
         )
         .addStringOption(option =>
             option.setName('value')
+            .setDescription('The amount to change by')
             .setRequired(true)
         ),
     async execute(interaction) {
