@@ -50,9 +50,9 @@ module.exports = {
                 content: 'Invalid.',
                 ephemeral: true
             });
+        }
             await character.save();
 
-            await interaction.reply(`${character}'s **${statName}** changed successfully!`);
-        }
+            await interaction.reply(`${character.characterName}'s **${statName}** changed successfully!`);
     }
 } 
