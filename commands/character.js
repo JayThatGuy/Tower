@@ -28,6 +28,7 @@ module.exports = {
         const newCharacter = new Character({
             userId: userId,
             characterName: characterName,
+            level: 0,
             strength: 0,
             dexterity: 0,
             constitution: 0,
