@@ -46,7 +46,7 @@ module.exports = {
             character.gold = newStat;
         } else {
             return interaction.reply({
-                content: 'No Character.',
+                content: 'Invalid.',
                 ephemeral: true
             });
             await character.save();
