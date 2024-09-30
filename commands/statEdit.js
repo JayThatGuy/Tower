@@ -31,19 +31,25 @@ module.exports = {
         // adjust stat
         if (statName == 'Str', 'str', 'Strength', 'strength') {
             const newStat = statChange + character.strength;
+            character.strength = newStat;
         } else if (statName == 'Dex', 'dex', 'Dexterity', 'dexterity') {
             const newStat = statChange + character.dexterity;
+            character.dexterity = newStat;
         } else if (statName == 'Con', 'con', 'Constitution', 'constitution') {
             const newStat = statChange + character.constitution;
+            character.constitution = newStat;
         } else if (statName == 'Int', 'int', 'Intelligence', 'intelligence') {
             const newStat = statChange + character.intelligence;
+            character.intelligence = newStat;
         } else if (statName == 'Gold', 'gold') {
             const newStat = statChange + character.gold;
+            character.gold = newStat;
         } else {
             return interaction.reply({
                 content: 'No Character.',
                 ephemeral: true
             });
+            await character.save();
         }
     }
 } 
