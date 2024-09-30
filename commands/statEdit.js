@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const Character = require('../schemas/char'); // Import the character model
 
 module.exports = {
     data: new SlashCommandBuilder()
