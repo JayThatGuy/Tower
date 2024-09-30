@@ -28,7 +28,7 @@ module.exports = {
                 ephemeral: true
             });
         }
-        // Edit stats
+        // conform syntax
         if (statName == 'Str', 'str', 'Strength', 'strength') {
             statName = 'strength';
         } else if (statName == 'Dex', 'dex', 'Dexterity', 'dexterity') {
@@ -45,6 +45,7 @@ module.exports = {
                 ephemeral: true
             });
         }
-        
+        // adjust stat
+        const newStat = statChange + character.(statName);
     }
 } 
