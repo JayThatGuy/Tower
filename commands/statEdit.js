@@ -51,6 +51,8 @@ module.exports = {
                 ephemeral: true
             });
             await character.save();
+
+            await interaction.reply(`${character}'s **${statName}** changed successfully!`);
         }
     }
 } 
