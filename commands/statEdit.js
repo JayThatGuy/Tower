@@ -45,6 +45,9 @@ module.exports = {
         } else if (statName == 'Gold', 'gold') {
             const newStat = statChange + character.gold;
             character.gold = newStat;
+        } else if (statName == 'Lv', 'lv', 'LV', 'LVL', 'lvl') {
+            const newStat = statChange + character.level;
+            character.level = newStat;
         } else {
             return interaction.reply({
                 content: 'Invalid.',
