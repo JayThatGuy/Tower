@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('Stat Edit')
+        .setName('statEdit')
         .setDescription('Increase or decrease a stat value'),
     async execute(interaction) {
         const userId = interaction.user.id;
