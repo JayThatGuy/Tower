@@ -5,7 +5,6 @@ module.exports = {
         .setName('Stat Edit')
         .setDescription('Increase or decrease a stat value'),
     async execute(interaction) {
-        const characterName = interaction.options.getString('name');
         const userId = interaction.user.id;
 
         // checkfor an existing character
