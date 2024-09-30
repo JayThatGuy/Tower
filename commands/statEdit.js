@@ -3,7 +3,7 @@ const Character = require('../schemas/char'); // Import the character model
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('statEdit')
+        .setName('statedit')
         .setDescription('Increase or decrease a stat value'),
     async execute(interaction) {
         const userId = interaction.user.id;
