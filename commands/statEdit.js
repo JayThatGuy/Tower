@@ -30,22 +30,22 @@ module.exports = {
             });
         }
         // adjust stat
-        if (statName === 'Str' || 'str' || 'Strength' || 'strength') {
+        if (statName === 'Str' || statName === 'str' || statName === 'Strength' || statName === 'strength') {
             const newStat = statChange + character.strength;
             character.strength = newStat;
-        } else if (statName === 'Dex' || 'dex' || 'Dexterity' || 'dexterity') {
+        } else if (statName === 'Dex' || statName === 'dex' || statName === 'Dexterity' || statName === 'dexterity') {
             const newStat = statChange + character.dexterity;
             character.dexterity = newStat;
-        } else if (statName === 'Con' || 'con' || 'Constitution' || 'constitution') {
+        } else if (statName === 'Con' || statName === 'con' || statName === 'Constitution' || statName === 'constitution') {
             const newStat = statChange + character.constitution;
             character.constitution = newStat;
-        } else if (statName === 'Int' || 'int' || 'Intelligence' || 'intelligence') {
+        } else if (statName === 'Int' || statName === 'int' || statName === 'Intelligence' || statName === 'intelligence') {
             const newStat = statChange + character.intelligence;
             character.intelligence = newStat;
-        } else if (statName === 'Gold' || 'gold') {
+        } else if (statName === 'Gold' || statName === 'gold') {
             const newStat = statChange + character.gold;
             character.gold = newStat;
-        } else if (statName === 'Lv' || 'lv' || 'LV' || 'Lvl' || 'lvl' || 'Level' || 'level') {
+        } else if (statName === 'Lv' || statName === 'lv' || statName === 'LV' || statName === 'Lvl' || statName === 'lvl' || statName === 'Level' || statName === 'level') {
             const newStat = statChange + character.level;
             character.level = newStat;
         } else {
