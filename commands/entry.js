@@ -8,18 +8,22 @@ module.exports = {
 		.setName('enter')
 		.setDescription('Enter the Gungeon!'),
 	async execute(interaction, client) {
-		const button = new ButtonBuilder()
-		.setCustomId('rightBtn')
-		.setStyle(ButtonStyle.Primary)
-		.setLabel('Begin your journey!');
-		const button = new ButtonBuilder()
-		.setCustomId('middleBtn')
-		.setStyle(ButtonStyle.Primary)
-		.setLabel('Begin your journey!');
-		const button = new ButtonBuilder()
+		const leftBtn = new ButtonBuilder()
 		.setCustomId('leftBtn')
 		.setStyle(ButtonStyle.Primary)
-		.setLabel('Begin your journey!');
+		.setLabel('Left');
+		const middleBtn = new ButtonBuilder()
+		.setCustomId('middleBtn')
+		.setStyle(ButtonStyle.Primary)
+		.setLabel('Middle');
+		const rightBtn = new ButtonBuilder()
+		.setCustomId('rightBtn')
+		.setStyle(ButtonStyle.Primary)
+		.setLabel('Right');
+		const leaveBtn = new ButtonBuilder()
+		.setCustomId('leaveBtn')
+		.setStyle(ButtonStyle.Primary)
+		.setLabel('Leave');
 
 		const row = new ActionRowBuilder()
 		.addComponents(button);
