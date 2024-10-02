@@ -9,7 +9,15 @@ module.exports = {
 		.setDescription('Enter the Gungeon!'),
 	async execute(interaction, client) {
 		const button = new ButtonBuilder()
-		.setCustomId('Enter')
+		.setCustomId('rightBtn')
+		.setStyle(ButtonStyle.Primary)
+		.setLabel('Begin your journey!');
+		const button = new ButtonBuilder()
+		.setCustomId('middleBtn')
+		.setStyle(ButtonStyle.Primary)
+		.setLabel('Begin your journey!');
+		const button = new ButtonBuilder()
+		.setCustomId('leftBtn')
 		.setStyle(ButtonStyle.Primary)
 		.setLabel('Begin your journey!');
 
@@ -17,7 +25,7 @@ module.exports = {
 		.addComponents(button);
 
 		await interaction.reply({
-			content: 'E',
+			content: 'Begin your Journey!',
 			components: [row],
 		});
 
