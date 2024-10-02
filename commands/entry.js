@@ -26,7 +26,7 @@ module.exports = {
 		.setLabel('Leave');
 
 		const row = new ActionRowBuilder()
-		.addComponents(button);
+		.addComponents(leftBtn);
 
 		await interaction.reply({
 			content: 'Begin your Journey!',
