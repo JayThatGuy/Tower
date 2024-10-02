@@ -51,7 +51,7 @@ module.exports = {
 		const middleDoor = doorColor(getRandomInt(3));
 
 		await interaction.reply({
-			content: '!',
+			content: `The left door is **$[leftDoor]**. The middle door is $[middleDoor]. The right door is $[rightDoor].`,
 			components: [row1, row2],
 		});
 
