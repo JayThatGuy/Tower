@@ -38,9 +38,9 @@ module.exports = {
         	const row2 = new ActionRowBuilder()
 		.addComponents(leaveButton);
 
-		int leftDoor;
-		int right Door;
-		int middle Door;
+		int leftDoor = 0;
+		int rightDoor = 0;
+		int middleDoor = 0;
 
 		await interaction.reply({
 			content: 'Begin your Journey!',
