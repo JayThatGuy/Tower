@@ -8,7 +8,14 @@ const characterSchema = new mongoose.Schema({
     strength: { type: Number, default: 0 },
     dexterity: { type: Number, default: 0 },
     constitution: { type: Number, default: 0 },
-    intelligence: { type: Number, default: 0 }
+    intelligence: { type: Number, default: 0 },
+    gold: {type: Number, default: 0},
+    main: {type: String, default: "empty"},
+    offHand: {type: String, default: "empty"},
+    armor: {type: String, default: "empty"},
+    misc1: {type: String, default: "empty"},
+    misc2: {type: String, default: "empty"},
+    misc3: {type: String, default: "empty"}
 });
 
 // Create a model for the character
