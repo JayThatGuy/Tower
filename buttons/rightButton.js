@@ -1,0 +1,4 @@
+module.exports = {
+	customID: 'rightBtn',
+	
+}
