@@ -3,6 +3,14 @@ const { EmbedBuilder } = require('discord.js');
 const Character = require('../schemas/char'); // Import the character model
 const Tower = require('../schemas/tower'); // Import the tower model
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function doorColor(roll) {
+	
+}
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('enter')
@@ -29,6 +37,10 @@ module.exports = {
 		.addComponents(rightButton, middleButton, leftButton);
         	const row2 = new ActionRowBuilder()
 		.addComponents(leaveButton);
+
+		int leftDoor;
+		int right Door;
+		int middle Door;
 
 		await interaction.reply({
 			content: 'Begin your Journey!',
