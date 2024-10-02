@@ -5,7 +5,10 @@ const entrySchema = new mongoose.Schema({
     userId: {type:String, required:true},
     currentFloor: {type:Number, default:0},
     highestFloor: {type:Number, default:0},
-    encounter: {type:Number,default:0}
+    encounter: {type:Number, default:0},
+    leftDoor: {type:Number, default:0},
+    middleDoor: {type:Number, default:0},
+    rightDoor: {type:Number, default:0}
 });
 
 // Create a model for the tower entry
