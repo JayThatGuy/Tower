@@ -3,10 +3,12 @@ const { EmbedBuilder } = require('discord.js');
 const Character = require('../schemas/char'); // Import the character model
 const Tower = require('../schemas/tower'); // Import the tower model
 
+// rng
 function getRandomInt(max) {
 	return Math.floor(Math.random() * max);
 }
 
+// determine door type
 function doorColor(roll) {
 	if (roll == 0) {
 		return ('Red');
@@ -23,6 +25,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('enter')
 		.setDescription('Enter the Gungeon!'),
+	// create buttons
 	async execute(interaction, client) {
 		const leftButton = new ButtonBuilder()
 		.setCustomId('leftBtn')
@@ -46,6 +49,7 @@ module.exports = {
         	const row2 = new ActionRowBuilder()
 		.addComponents(leaveButton);
 
+		//generate doors
 		const leftDoor = doorColor(getRandomInt(3));
 		const rightDoor = doorColor(getRandomInt(3));
 		const middleDoor = doorColor(getRandomInt(3));
