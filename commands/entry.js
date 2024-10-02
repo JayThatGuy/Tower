@@ -4,11 +4,19 @@ const Character = require('../schemas/char'); // Import the character model
 const Tower = require('../schemas/tower'); // Import the tower model
 
 function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
+	return Math.floor(Math.random() * max);
 }
 
 function doorColor(roll) {
-	
+	if (roll == 0) {
+		return ('Red');
+	} else if (roll == 1) {
+		return ('blue');
+	} else if (roll == 2) {
+		return ('green');
+	} else {
+		return ('broken');
+	}
 }
 
 module.exports = {
@@ -38,12 +46,12 @@ module.exports = {
         	const row2 = new ActionRowBuilder()
 		.addComponents(leaveButton);
 
-		number leftDoor = 0;
-		number rightDoor = 0;
-		number middleDoor = 0;
+		const leftDoor = doorColor(getRandomInt(3));
+		const rightDoor = doorColor(getRandomInt(3));
+		const middleDoor = doorColor(getRandomInt(3));
 
 		await interaction.reply({
-			content: 'Begin your Journey!',
+			content: '!',
 			components: [row1, row2],
 		});
 
