@@ -9,13 +9,13 @@ module.exports = {
         const entry = await Tower.findOne({ userId });
 
         const rightButton = new ButtonBuilder()
-	    .setCustomId('rightBtn')
-	    .setStyle(ButtonStyle.Primary)
-	    .setLabel('Right');
-	    const middleButton = new ButtonBuilder()
-	    .setCustomId('middleBtn')
-	    .setStyle(ButtonStyle.Primary)
-	    .setLabel('Middle');
+	.setCustomId('rightBtn')
+	.setStyle(ButtonStyle.Primary)
+	.setLabel('Right');
+	const middleButton = new ButtonBuilder()
+	.setCustomId('middleBtn')
+	.setStyle(ButtonStyle.Primary)
+	.setLabel('Middle');
         const leftButton = new ButtonBuilder()
         .setCustomId('leftBtn')
         .setStyle(ButtonStyle.Primary)
@@ -32,11 +32,11 @@ module.exports = {
 
         
         
-		entry.currentFloor += 1;
+	entry.currentFloor += 1;
         if(entry.currentFloor > entry.highestFloor){
             entry.highestFloor = entry.currentFloor;
         }
-		await entry.save();
+	await entry.save();
 
         await interaction.update({
             content: `Going up.`,
