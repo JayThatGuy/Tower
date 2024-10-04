@@ -1,4 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const Character = require('../schemas/char'); // Import the character model
 
@@ -33,6 +33,21 @@ module.exports = {
             });
         }
 
+        //create buttons
+        const statsButton = new ButtonBuilder()
+	    .setCustomId('statsBtn')
+	    .setStyle(ButtonStyle.Primary)
+	    .setLabel('Stats')
+        .setDisabled(true);
+        const equipButton = new ButtonBuilder()
+	    .setCustomId('equipBtn')
+	    .setStyle(ButtonStyle.Primary)
+	    .setLabel('Equipment');
+
+        //creates row
+        const profileRow = new ActionRowBuilder()
+        .addComponents(statsButton, equipButton);
+
         // Get the grades for each stat
         const strengthGrade = getGrade(character.strength);
         const dexterityGrade = getGrade(character.dexterity);
@@ -43,15 +58,12 @@ module.exports = {
         const profileEmbed = new EmbedBuilder()
             .setColor('#0099ff') // Set the embed color
             .setTitle(`${character.characterName} | Lv ${character.level}`)
-            .addFields({ name: 'Gold:', value: `${character.gold}`})
             .addFields({ name: 'Stats:', value: `**Strength**: ${strengthGrade}
                 **Dexterity**: ${dexterityGrade}
                 **Constitution**: ${constitutionGrade}
-                **Intelligence**: ${intelligenceGrade}`})
-            .addFields({
-                name: 'Weapon', value: `${character.main}`, inline:true},{name: 'Armor', value: `${character.armor}`, inline: true})
+                **Intelligence**: ${intelligenceGrade}`});
             
 
-        await interaction.reply({ embeds: [profileEmbed] }); // Send the embed
+        await interaction.reply({ embeds: [profileEmbed], components: [profileRow] }); // Send the embed
     }
 };
