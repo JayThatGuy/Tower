@@ -28,16 +28,21 @@ module.exports = {
         const newCharacter = new Character({
             userId: userId,
             characterName: characterName,
-            gold: 0,
-            level: 0,
             strength: 0,
             dexterity: 0,
             constitution: 0,
-            intelligence: 0
+            intelligence: 0,
+            gold: 0,
+            main: "Unarmed",
+            offHand: "Unarmed",
+            armor: "None",
+            misc1: "None",
+            misc2: "None",
+            misc3: "None",
         });
 
         await newCharacter.save();
 
-        await interaction.reply(`Character **${characterName}** created with base stats (strength: 0, dexterity: 0, constitution: 0, intelligence: 0)!`);
+        await interaction.reply(`**${characterName}** has begun their journey!`);
     }
 };
