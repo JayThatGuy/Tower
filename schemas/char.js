@@ -10,13 +10,13 @@ const characterSchema = new mongoose.Schema({
     constitution: { type: Number, default: 0 },
     intelligence: { type: Number, default: 0 },
     gold: {type: Number, default: 0},
-    main: {type: String, default: "empty"},
-    offHand: {type: String, default: "empty"},
-    armor: {type: String, default: "empty"},
-    misc1: {type: String, default: "empty"},
-    misc2: {type: String, default: "empty"},
-    misc3: {type: String, default: "empty"}
-});
+    main: {type: String, default: "Unarmed"},
+    offHand: {type: String, default: "Unarmed"},
+    armor: {type: String, default: "None"},
+    misc1: {type: String, default: "None"},
+    misc2: {type: String, default: "None"},
+    misc3: {type: String, default: "None"}
+}); 
 
 // Create a model for the character
 const Character = mongoose.model('Character', characterSchema);
